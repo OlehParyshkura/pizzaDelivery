@@ -22,28 +22,32 @@
                 <div class="nav__badge">0</div>
             </div>
             <div class="nav__title">Корзина</div>
+            
         </div>
-        <hr>
+        <div class="menu-toggle" tabindex="0">
+            <img src="icons\menu-button.svg" alt="menu">
+        </div>
     </header>
     
     <div class="goods">
         <div class="goods__filter">
             <form action="#">
-            <input type="text" placeholder="Я ищу..." class="search">
+            <input type="text" placeholder="Я шукаю..." class="search">
             <select id="price_sort">
                 <option selected disabled>Сортувати за ціною</option>
                 <option id="expensiveFirst">Спочатку дорогі</option>
                 <option id="cheapFirst">Спочатку дешеві</option>
             </select>
-            <p><label><input type="checkbox" id="withoutMushrooms">Без печериць</label></p>
-            <p><label><input type="checkbox" id="withoutOnion">Без цибулі</label></p>
-            <p><label><input type="checkbox" id="withoutMustard">Без гірчиці</label></p>
-            <p><label><input type="checkbox" id="withoutOlives">Без маслин</label></p>
+            <p><input type="checkbox" id="withoutMushrooms"><label for="withoutMushrooms">Без печериць</label></p>
+            <p><input type="checkbox" id="withoutOnion"><label for="withoutOnion">Без цибулі</label></p>
+            <p><input type="checkbox" id="withoutMustard"><label for="withoutMustard">Без гірчиці</label></p>
+            <p><input type="checkbox" id="withoutOlives"><label for="withoutOlives">Без маслин</label></p>
         </form>
     </div>
         <div class="goods__wrapper">
 
-        </div><div></div>
+        </div>
+        <div></div>
         <div class="prev-next__wrapper">
                 <button class="prev__button"><<</button>
                 <button class="next__button">>></button>

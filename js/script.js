@@ -34,15 +34,15 @@ function createElement(arr) {
         card.classList.add('goods__item');
         card.innerHTML = `
             <div class="goods__title">
-                 ${item.title}
+                <span> ${item.title}</span>
             </div>
-            <div class="goods__ingredients" title="${item.ingredients.join("\n")}">
-            інгредієнти(і)</div>
+            <div class="goods__ingredients" title="${item.ingredients.join("\n")}"><span>
+            інгредієнти(і)</span></div>
             <img class="goods__img" src="${item.url}" alt="pizza">
             <div class="goods__price__wrapper">
-            <div><span>30см</span></div><div><span>40см</span></div>
-            <button class="goods__btn goods__price"> <span>${item.price[0]}</span> грн</button>
-            <button class="goods__btn goods__price"> <span>${item.price[1]}</span> грн</button>
+            <div class="goods__diameter"><span>30см</span></div><div class="goods__diameter"><span>40см</span></div>
+            <button class="goods__btn"> <span>${item.price[0]}</span> грн</button>
+            <button class="goods__btn"> <span>${item.price[1]}</span> грн</button>
             </div>
             `;
         goodsWrapper.appendChild(card);
