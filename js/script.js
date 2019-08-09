@@ -9,7 +9,6 @@ const loadContent = async (url, callback) => {
             goodsmemo = json.goods;
             goodsForViev = json.goods;
             createElement(json.goods);
-            console.log(goodsmemo.length);
         });
     callback();
 }
@@ -70,7 +69,6 @@ function createElement(arr) {
             showConfirm();
 
             removeBtn.classList.add('goods__item-remove');
-            //removeBtn.setAttribute("tabindex",2);
             removeBtn.innerHTML = '&times';
             item.appendChild(removeBtn);
 
@@ -110,7 +108,6 @@ function createElement(arr) {
     function calcTotal() {
         let prices = document.querySelectorAll('.cart__wrapper > .goods__item > .goods__price > span');
         let total = 0;
-        console.log(typeof(prices));
         total = [...prices]
                 .map((a)=> +a.textContent)
                 .reduce((a,b)=>a+b,0);
@@ -149,19 +146,15 @@ loadContent('js/db.json', () => {
 
         menuToggle.addEventListener("click",()=>{
             goods.classList.toggle("menu__hidden");
-            sortFilter.attributes.toggle("tabindex");
         })
     
 
     prevButton.addEventListener("click", () => {
-
-        console.log("p");
         pageOpened--;
         createElement(goodsForViev);
     });
     nextButton.addEventListener("click", function (e) {
         pageOpened++;
-        console.log("n");
         createElement(goodsForViev);
     });
 
@@ -209,9 +202,7 @@ loadContent('js/db.json', () => {
         if(searchVal!=''){
             g=g.filter(el=>{
                 let flag = false;
-                //console.log(el);
                 for (key in el){
-                   // console.log(key);
                     if(el[key] instanceof Array){
                         el[key].forEach(el=>{
                             if(el.toLowerCase().includes(searchVal.toLowerCase())) 
