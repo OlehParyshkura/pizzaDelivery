@@ -16,21 +16,21 @@
         <div class="logo">
             <img src="logo/logo.svg" alt="logo">
         </div>
-        <div class="nav" id="cart" tabindex="0">
+        <button class="nav" id="cart" >
             <div class="nav__item">
                 <img src="icons/cart.svg" alt="cart">
                 <div class="nav__badge">0</div>
             </div>
             <div class="nav__title">Корзина</div>
             
-        </div>
-        <div class="menu-toggle" tabindex="0">
+        </button>
+        <button class=" nav menu-toggle">
             <img src="icons\menu-button.svg" alt="menu">
-        </div>
+        </button>
     </header>
     
-    <div class="goods">
-        <div class="goods__filter">
+    <div class="goods menu__hidden">
+        <div class="goods__filter"><div>
             <form action="#">
             <input type="text" placeholder="Я шукаю..." class="search">
             <select id="price_sort">
@@ -43,6 +43,7 @@
             <p><input type="checkbox" id="withoutMustard"><label for="withoutMustard">Без гірчиці</label></p>
             <p><input type="checkbox" id="withoutOlives"><label for="withoutOlives">Без маслин</label></p>
         </form>
+    </div>
     </div>
         <div class="goods__wrapper">
 
@@ -64,13 +65,13 @@
                 </div>
             </div>
             <button class="cart__confirm">Оформити замовлення</button>
-            <div class="cart__close">
+            <button class="cart__close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
-            </div>
+            </button>
         </div>
     </div>
 

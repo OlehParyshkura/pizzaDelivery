@@ -69,8 +69,17 @@ input[type=checkbox]:focus + label:before
     justify-content: center
     align-items: center
     cursor: pointer
+    background-color: transparent
+    box-shadow: none
+    outline: none
+    border: none
+    &:focus 
+            outline: none
+            border: 1px solid #DC3E2A
     &__item 
         position: relative
+        
+
     &__title 
         margin-left: 10px
     &__badge 
@@ -99,6 +108,9 @@ input[type=checkbox]:focus + label:before
     margin-right: auto
     &__filter
         margin: 0.5em
+        div
+            position: sticky
+            top: 60px
     &__wrapper
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
@@ -140,6 +152,7 @@ input[type=checkbox]:focus + label:before
             box-shadow: 0 0 15px rgba(220, 62, 42, .7)
     &__img 
         width: 100%
+
     &__price__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
@@ -179,7 +192,7 @@ input[type=checkbox]:focus + label:before
         color: rgba(0,0,0, .4)
     &__wrapper
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
+       
         grid-gap: 1em
         flex-wrap: wrap
         margin-top: 25px
@@ -223,17 +236,33 @@ input[type=checkbox]:focus + label:before
     img 
         width: 100%
 
+.menu__hidden
+    grid-template-columns: 1fr
+    .goods__filter
+        width: 0
+        height: 0
+        overflow: hidden
+        display: none 
+        
+
 @media (max-width: 1000px)
     .goods__wrapper
         grid-template-columns: 1fr 1fr 1fr
     .cart__wrapper
         grid-template-columns: 1fr 1fr 1fr 1fr
+    .menu__hidden
+        .goods__wrapper
+            grid-template-columns: 1fr 1fr 1fr 1fr
+        
 
 @media (max-width: 760px)
     .goods__wrapper
         grid-template-columns: 1fr 1fr
     .cart__wrapper
         grid-template-columns: 1fr 1fr 1fr
+    .menu__hidden
+        .goods__wrapper
+            grid-template-columns: 1fr 1fr 1fr
 
 @media (max-width: 580px)
     .goods
@@ -242,6 +271,10 @@ input[type=checkbox]:focus + label:before
         grid-template-columns: 1fr    
     .cart__wrapper
         grid-template-columns: 1fr 1fr
+    .menu__hidden
+        grid-template-columns: 1fr
+        .goods__wrapper
+            grid-template-columns: 1fr 1fr 
 
 @media (max-width: 400px)
     .goods
@@ -250,9 +283,17 @@ input[type=checkbox]:focus + label:before
         grid-template-columns: 1fr
     .cart__wrapper
         grid-template-columns: 1fr 1fr
+    .goods__filter
+        position: fixed
+        background-color: white
+        z-index: 2
+    .menu__hidden
+        .goods__wrapper
+            grid-template-columns: 1fr
+    
 
-@media (min-width: 1001px)
+@media (min-width: 1000px)
     .goods__wrapper
         grid-template-columns: 1fr 1fr 1fr 1fr
     .cart__wrapper
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr 1fr

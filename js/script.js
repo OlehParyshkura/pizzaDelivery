@@ -38,7 +38,7 @@ function createElement(arr) {
             </div>
             <div class="goods__ingredients" title="${item.ingredients.join("\n")}"><span>
             інгредієнти(і)</span></div>
-            <img class="goods__img" src="${item.url}" alt="pizza">
+            <div class="goods__img__wrapper"><img class="goods__img" src="${item.url}" alt="pizza"></div>
             <div class="goods__price__wrapper">
             <div class="goods__diameter"><span>30см</span></div><div class="goods__diameter"><span>40см</span></div>
             <button class="goods__btn"> <span>${item.price[0]}</span> грн</button>
@@ -58,7 +58,7 @@ function createElement(arr) {
         btn.addEventListener('click', function (e) {
             item = products[parseInt(i/2)].cloneNode(true);
             let priceWraper = item.querySelector('.goods__price__wrapper'),
-                removeBtn = document.createElement('div'),
+                removeBtn = document.createElement("button"),
                 empty = cartWrapper.querySelector('.empty'),
                 price = document.createElement("div");
             priceValue = +this.querySelector("span").innerHTML;
@@ -70,6 +70,7 @@ function createElement(arr) {
             showConfirm();
 
             removeBtn.classList.add('goods__item-remove');
+            //removeBtn.setAttribute("tabindex",2);
             removeBtn.innerHTML = '&times';
             item.appendChild(removeBtn);
 
@@ -140,30 +141,45 @@ loadContent('js/db.json', () => {
     const cart = document.querySelector('.cart'),
         close = document.querySelector('.cart__close'),
         open = document.querySelector('#cart'),
-        sortFilter = document.querySelector(".goods__filter > form"),
+        sortFilter = document.querySelector(".goods__filter > div > form"),
         nextButton = document.querySelector(".next__button"),
-        prevButton = document.querySelector(".prev__button");
+        prevButton = document.querySelector(".prev__button"),
+        menuToggle = document.querySelector(".menu-toggle")
+        goods=document.querySelector(".goods");
 
-    prevButton.addEventListener('click', () => {
+        menuToggle.addEventListener("click",()=>{
+            goods.classList.toggle("menu__hidden");
+            sortFilter.attributes.toggle("tabindex");
+        })
+    
+
+    prevButton.addEventListener("click", () => {
 
         console.log("p");
         pageOpened--;
         createElement(goodsForViev);
     });
-    nextButton.addEventListener('click', function (e) {
+    nextButton.addEventListener("click", function (e) {
         pageOpened++;
         console.log("n");
         createElement(goodsForViev);
     });
 
     function openCart() {
-        cart.style.display = 'grid';
-        document.body.style.overflow = 'hidden';
+        cart.style.display = "grid";
+        document.body.style.overflow = "hidden";
+        if(cart.querySelector(".goods__item > .goods__item-remove")){
+            cart.querySelector(".goods__item > .goods__item-remove").focus();
+        }
+        else{
+            cart.querySelector(".cart__close").focus();
+        }
     }
 
     function closeCart() {
         cart.style.display = 'none';
         document.body.style.overflow = '';
+        open.focus()
     }
     for (let i = 0, n = sortFilter.elements.length; i < n; i++) {
         sortFilter.elements[i].addEventListener("input", SortFilterHandler.bind(sortFilter));
