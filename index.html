@@ -13,46 +13,51 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="logo/logo.svg" alt="logo">
+        <div class="logo__wrapper">
+            <button class=" nav menu-toggle">
+                <img src="icons\menu-button.svg" alt="menu">
+            </button>
+            <div class="logo">
+                <img src="logo/logo.svg" alt="logo">
+            </div>
         </div>
-        <button class="nav" id="cart" >
+        <button class="nav" id="cart">
             <div class="nav__item">
                 <img src="icons/cart.svg" alt="cart">
                 <div class="nav__badge">0</div>
             </div>
             <div class="nav__title">Корзина</div>
-            
+
         </button>
-        <button class=" nav menu-toggle">
-            <img src="icons\menu-button.svg" alt="menu">
-        </button>
+
     </header>
-    
+
     <div class="goods menu__hidden">
-        <div class="goods__filter"><div>
-            <form action="#">
-            <input type="text" placeholder="Я шукаю..." class="search">
-            <select id="price_sort">
-                <option selected disabled>Сортувати за ціною</option>
-                <option id="expensiveFirst">Спочатку дорогі</option>
-                <option id="cheapFirst">Спочатку дешеві</option>
-            </select>
-            <p><input type="checkbox" id="withoutMushrooms"><label for="withoutMushrooms">Без печериць</label></p>
-            <p><input type="checkbox" id="withoutOnion"><label for="withoutOnion">Без цибулі</label></p>
-            <p><input type="checkbox" id="withoutMustard"><label for="withoutMustard">Без гірчиці</label></p>
-            <p><input type="checkbox" id="withoutOlives"><label for="withoutOlives">Без маслин</label></p>
-        </form>
-    </div>
-    </div>
+        <div class="goods__filter">
+            <div>
+                <form action="#">
+                    <input type="text" placeholder="Я шукаю..." class="search">
+                    <select id="price_sort">
+                        <option selected disabled>Сортувати за ціною</option>
+                        <option id="expensiveFirst">Спочатку дорогі</option>
+                        <option id="cheapFirst">Спочатку дешеві</option>
+                    </select>
+                    <p><input type="checkbox" id="withoutMushrooms"><label for="withoutMushrooms">Без печериць</label>
+                    </p>
+                    <p><input type="checkbox" id="withoutOnion"><label for="withoutOnion">Без цибулі</label></p>
+                    <p><input type="checkbox" id="withoutMustard"><label for="withoutMustard">Без гірчиці</label></p>
+                    <p><input type="checkbox" id="withoutOlives"><label for="withoutOlives">Без маслин</label></p>
+                </form>
+            </div>
+        </div>
         <div class="goods__wrapper">
 
         </div>
         <div></div>
         <div class="prev-next__wrapper">
-                <button class="prev__button"><<</button>
-                <button class="next__button">>></button>
-            </div>
+            <button class="prev__button"><<</button> 
+            <button class="next__button">>></button>
+        </div>
     </div>
     <div class="cart">
         <div class="cart__body">

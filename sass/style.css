@@ -17,6 +17,13 @@ header {
   z-index: 2;
 }
 
+header .logo__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
 input[type=checkbox] + label {
   display: block;
   margin: 0.2em;
