@@ -16,13 +16,13 @@ const loadContent = async (url, callback) => {
 }
 
 function createElement(arr) {
-    let a = pageOpened * goodsPerPage;
-    while (arr[a] == undefined && pageOpened != 0) {
+    let firstIndex = pageOpened * goodsPerPage;
+    while (arr[firstIndex] == undefined && pageOpened != 0) {
         pageOpened--;
-        a = pageOpened * goodsPerPage;
+        firstIndex = pageOpened * goodsPerPage;
     }
     prevButton.disabled = pageOpened == 0 ? true : false;
-    nextButton.disabled = arr[a + goodsPerPage] == undefined ? true : false;
+    nextButton.disabled = arr[firstIndex + goodsPerPage] == undefined ? true : false;
     const goodsWrapper = document.querySelector('.goods__wrapper');
     goodsWrapper.innerHTML = "";
     let goodsArr = arr.slice(pageOpened * goodsPerPage, pageOpened * goodsPerPage + goodsPerPage);

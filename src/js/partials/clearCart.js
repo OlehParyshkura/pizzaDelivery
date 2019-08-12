@@ -1,7 +1,4 @@
-const //cart = document.querySelector('.cart'),
-    //cartClose = document.querySelector('.cart__close'),
-    //cartOpen = document.querySelector('#cart'),
-    cartClear = document.querySelector(".cart__clear"),
+const cartClear = document.querySelector(".cart__clear"),
     totalCost = document.querySelector('.cart__total > span'),
     cart = document.querySelector(".cart"),
     cartWrapper = cart.querySelector(".modal__window__wrapper"),
