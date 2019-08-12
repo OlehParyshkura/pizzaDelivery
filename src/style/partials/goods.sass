@@ -1,0 +1,122 @@
+.goods
+    display: grid
+    grid-template-columns: 1fr 3fr
+    max-width: 960px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    &__filter
+        padding: 1em
+        div
+            position: sticky
+            top: 60px
+            p
+                padding-top: 0.5em
+    &__wrapper
+        display: grid
+        grid-gap: 1em
+    &__title 
+        text-align: center
+   
+    &__item
+        position: relative
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        
+        &-remove
+            position: absolute
+            top: 0px
+            right: 0px
+            width: 25px
+            height: 25px
+            text-align: center
+            line-height: 22px
+            border: 1px solid rgba(0,0,0,.1)
+            border-radius: 100%
+            background-color: #fff
+            cursor: pointer
+            &:hover
+                color: #DC3E2A
+    &__price
+        text-align: center
+    &__btn
+        background-color: #DC3E2A
+        padding: 0.3em
+        border: none 
+        outline: none
+        margin-top: 20px
+        color: #ffffff
+        cursor: pointer 
+        &:focus 
+            outline: none
+            box-shadow: 0 0 15px rgba(220, 62, 42, .7)
+        &:hover 
+            box-shadow: 0 0 15px rgba(220, 62, 42, .7)
+    &__img 
+        width: 100%
+        &__wrapper
+            display: inline-block 
+            position: relative 
+            width: 100%
+            &:hover::after 
+                content: attr(data-title) 
+                position: absolute 
+                left: 0
+                right: 0
+                bottom: 0.1em 
+                z-index: 1 
+                background: rgba(220, 62, 42,0.7) 
+                color: #fff 
+                text-align: center 
+                font-size: 0.9em 
+                padding: 1em 
+                font-weight: 600
+
+    &__price__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 0.1em 
+    &__diameter 
+        margin: 0 auto
+
+.prev-next__wrapper
+    margin: 0 auto
+.prev__button 
+    background-color: #DC3E2A
+    padding: 1em
+    border: none 
+    outline: none
+    margin-top: 20px
+    color: #ffffff
+    cursor: pointer 
+    &:focus 
+        outline: none
+        box-shadow: 0 0 15px rgba(220, 62, 42, .7)
+    &:hover 
+        box-shadow: 0 0 15px rgba(220, 62, 42, .7)
+    &:disabled
+        opacity: 0.5
+.next__button
+    background-color: #DC3E2A
+    padding: 1em
+    border: none 
+    outline: none
+    margin-top: 20px
+    color: #ffffff
+    cursor: pointer 
+    &:focus 
+        outline: none
+        box-shadow: 0 0 15px rgba(220, 62, 42, .7)
+    &:hover 
+        box-shadow: 0 0 15px rgba(220, 62, 42, .7)
+    &:disabled
+        opacity: 0.5
+
+
+
+.menu__hidden
+    grid-template-columns: 1fr
+    .goods__filter
+        display: none 

@@ -1,0 +1,36 @@
+{
+  "name": "pizzaDelivery",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000p\u0000i\u0000z\u0000z\u0000a\u0000D\u0000e\u0000l\u0000i\u0000v\u0000e\u0000r\u0000y\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParishkuraOleg/pizzaDelivery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "del": "^5.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-jsonminify": "^1.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^8.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ParishkuraOleg/pizzaDelivery/issues"
+  },
+  "homepage": "https://github.com/ParishkuraOleg/pizzaDelivery#readme"
+}
