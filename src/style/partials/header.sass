@@ -3,7 +3,7 @@ header
     justify-content: space-between
     position: sticky
     top: 0
-    background-color: white
+    background-color: $backgroundColor
     z-index: 2
     .logo__wrapper
         display: grid
@@ -24,7 +24,7 @@ header
     border: none
     &:focus 
             outline: none
-            border: 1px solid #DC3E2A
+            border: 1px solid $mainColor
     &__item 
         position: relative
         max-width: 50px
@@ -41,11 +41,11 @@ header
         height: 1.1em
         padding: 0 0.3em
         text-align: center
-        background: #DC3E2A
+        background: $mainColor
         border-radius: 1em
         font-size: 0.7em
         line-height: 1.4em
-        color: #fff
+        color: $buttonTextColor
     &:hover
         .nav__dropdown
             display: block
@@ -59,7 +59,7 @@ header
         display: none
         position: absolute
         top: 100%
-        background-color: white
+        background-color: $backgroundColor
         /*&:focus
             border: 1px solid black
             display: block*/
