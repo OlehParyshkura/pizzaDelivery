@@ -25,7 +25,7 @@ function createElement(arr) {
     nextButton.disabled = arr[firstIndex + goodsPerPage] == undefined ? true : false;
     const goodsWrapper = document.querySelector('.goods__wrapper');
     goodsWrapper.innerHTML = "";
-    let goodsArr = arr.slice(pageOpened * goodsPerPage, pageOpened * goodsPerPage + goodsPerPage);
+    let goodsArr = arr.slice(firstIndex, firstIndex + goodsPerPage);
     //= partials/addGoodsCards.js
 
     //= partials/goodsButtons.js

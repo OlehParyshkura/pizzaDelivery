@@ -4,7 +4,6 @@ for (let i = 0, n = sortFilter.elements.length; i < n; i++) {
 }
 
 function SortFilterHandler(e) {
-    const start = new Date().getTime();
     let goods = [...goodsmemo];
     const form = this,
         search = form.querySelector(".search"),
@@ -54,8 +53,5 @@ function SortFilterHandler(e) {
         goods = goods.filter(el => !el.ingredients.includes("соус гірчичний"));
     }
     goodsForViev = goods;
-    console.log(goods);
     createElement(goods, pageOpened);
-    const end = new Date().getTime();
-    console.log(`${end - start}ms`);
 }
